@@ -279,3 +279,33 @@ h2 {
   color: #38bdf8;
   margin-bottom: 10px;
 }
+
+.back-button {
+  display: inline-block;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #38bdf8;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.back-button:hover {
+  background-color: #38bdf8;
+  color: #020617;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-links a {
+  background-color: #38bdf8;
+  color: #020617;
+  padding: 12px 22px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
