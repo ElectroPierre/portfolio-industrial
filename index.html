@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Industrial | Jeanpierre Vega</title>
+  <title>Portfolio Industrial | Jeanpierre Vega Soria</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
@@ -17,6 +19,7 @@
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
       </ul>
     </nav>
   </header>
@@ -24,110 +27,151 @@
   <main>
 
     <section id="inicio">
-      <h1>Automatización Industrial, PLCs e IoT</h1>
-      <p>
-        Desarrollo soluciones de automatización, adquisición de datos
-        y visualización de procesos industriales.
-      </p>
-      <a href="#proyectos">Ver proyectos</a>
+      <div class="hero-content">
+        <p class="hero-tag">Ingeniería Electrónica Industrial y Automática</p>
+
+        <h1>Automatización Industrial, PLCs e IoT</h1>
+
+        <p class="hero-description">
+          Desarrollo soluciones de automatización, adquisición de datos,
+          bases de datos y visualización de procesos industriales.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#proyectos">Ver proyectos</a>
+          <a href="#contacto" class="secondary-button">Contactar</a>
+        </div>
+
+        <div class="tech-list">
+          <span>TIA Portal</span>
+          <span>PLC Siemens</span>
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Grafana</span>
+        </div>
+      </div>
     </section>
 
     <section id="sobre-mi">
-  <h2>Sobre mí</h2>
+      <h2>Sobre mí</h2>
 
-  <div class="about-card">
-    <p>
-      Soy estudiante de Ingeniería Electrónica Industrial y Automática,
-      enfocado en automatización industrial, programación de PLCs,
-      adquisición de datos, bases de datos y visualización de procesos.
-    </p>
+      <div class="about-card">
+        <p>
+          Soy estudiante de Ingeniería Electrónica Industrial y Automática,
+          enfocado en automatización industrial, programación de PLCs,
+          adquisición de datos, bases de datos y visualización de procesos.
+        </p>
 
-    <p>
-      Mi objetivo es desarrollar soluciones prácticas para entornos industriales,
-      conectando sensores, controladores, software y dashboards para mejorar
-      la supervisión y la toma de decisiones.
-    </p>
-  </div>
-</section>
+        <p>
+          Mi objetivo es desarrollar soluciones prácticas para entornos industriales,
+          conectando sensores, controladores, software y dashboards para mejorar
+          la supervisión y la toma de decisiones.
+        </p>
+      </div>
+    </section>
+    <section id="experiencia">
+      <h2>Experiencia y formación</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Ingeniería Electrónica Industrial y Automática</h3>
+          <p>Formación universitaria orientada a automatización, electrónica, control y programación industrial</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Prácticas en entorno industrial</h3>
+          <p>Experiencia en procesos industriales, automatización, calidad, documentación técnica y mejora de sistemas</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Proyectos técnicos personales</h3>
+          <p>Desarrollo de prototipos con PLCs, sensores, microcontroladores, bases de datos y dashboards</p>
+        </div>
+      </div>
+    </section>
 
     <section id="proyectos">
-  <h2>Proyectos</h2>
+      <h2>Proyectos</h2>
 
-  <div class="project-grid">
+      <div class="project-grid">
 
-    <article class="project-card">
-      <h3>Monitorización de motor industrial</h3>
-      <p>
-        Sistema para medir vibraciones con sensores IMU, procesar datos
-        y visualizar el estado del motor en un dashboard.
-      </p>
-      <span>ESP32 · IMU · MQTT · Grafana</span>
-    </article>
+        <article class="project-card">
+          <p class="project-status">En desarrollo</p>
+          <h3>Monitorización de motor industrial</h3>
+          <p>
+            Sistema para medir vibraciones con sensores IMU, procesar datos
+            y visualizar el estado del motor en un dashboard.
+          </p>
+          <span>ESP32 · IMU · MQTT · Grafana</span>
+          <a href="#" class="project-link">Ver proyectos</a>
+        </article>
 
-    <article class="project-card">
-      <h3>Microinvernadero automatizado</h3>
-      <p>
-        Control de temperatura, humedad y ventilación mediante PLC,
-        sensores ambientales y visualización de datos.
-      </p>
-      <span>PLC Siemens · TIA Portal · HMI · Sensores</span>
-    </article>
+        <article class="project-card">
+          <p class="project-status">En desarrollo</p>
+          <h3>Microinvernadero automatizado</h3>
+          <p>
+            Control de temperatura, humedad y ventilación mediante PLC,
+            sensores ambientales y visualización de datos.
+          </p>
+          <span>PLC Siemens · TIA Portal · HMI · Sensores</span>
+          <a href="#" class="project-link">Ver proyectos</a>
+        </article>
 
-    <article class="project-card">
-      <h3>Mini SCADA industrial</h3>
-      <p>
-        Sistema básico de adquisición de datos industriales con base de datos,
-        alarmas y paneles de supervisión.
-      </p>
-      <span>Node-RED · PostgreSQL · Grafana · SQL</span>
-    </article>
+        <article class="project-card">
+          <p class="project-status">En desarrollo</p>
+          <h3>Mini SCADA industrial</h3>
+          <p>
+            Sistema básico de adquisición de datos industriales con base de datos,
+            alarmas y paneles de supervisión.
+          </p>
+          <span>Node-RED · PostgreSQL · Grafana · SQL</span>
+          <a href="#" class="project-link">Ver proyectos</a>
+        </article>
 
-  </div>
-</section>
+      </div>
+    </section>
 
     <section id="habilidades">
-  <h2>Habilidades técnicas</h2>
+      <h2>Habilidades técnicas</h2>
 
-  <div class="skills-grid">
+      <div class="skills-grid">
 
-    <div class="skill-card">
-      <h3>Automatización</h3>
-      <p>TIA Portal, PLC Siemens, GRAFCET, HMI, sensores industriales.</p>
-    </div>
+        <div class="skill-card">
+          <h3>Automatización</h3>
+          <p>TIA Portal, PLC Siemens, GRAFCET, HMI, sensores industriales.</p>
+        </div>
 
-    <div class="skill-card">
-      <h3>Programación</h3>
-      <p>Python, C/C++, Arduino, MATLAB, lógica de control.</p>
-    </div>
+        <div class="skill-card">
+          <h3>Programación</h3>
+          <p>Python, C/C++, Arduino, MATLAB, lógica de control.</p>
+        </div>
 
-    <div class="skill-card">
-      <h3>Datos e IoT</h3>
-      <p>SQL, PostgreSQL, MQTT, Node-RED, Grafana, dashboards.</p>
-    </div>
+        <div class="skill-card">
+          <h3>Datos e IoT</h3>
+          <p>SQL, PostgreSQL, MQTT, Node-RED, Grafana, dashboards.</p>
+        </div>
 
-    <div class="skill-card">
-      <h3>Simulación</h3>
-      <p>Factory I/O, Proteus, Arena, simulación de procesos industriales.</p>
-    </div>
+        <div class="skill-card">
+          <h3>Simulación</h3>
+          <p>Factory I/O, Proteus, Arena, simulación de procesos industriales.</p>
+        </div>
 
-  </div>
-</section>
+      </div>
+    </section>
 
     <section id="contacto">
-  <h2>Contacto</h2>
+      <h2>Contacto</h2>
 
-  <div class="contact-card">
-    <p>
-      Estoy abierto a oportunidades relacionadas con automatización industrial,
-      PLCs, IoT industrial, bases de datos y visualización de procesos.
-    </p>
+      <div class="contact-card">
+        <p>
+          Estoy abierto a oportunidades relacionadas con automatización industrial,
+          PLCs, IoT industrial, bases de datos y visualización de procesos.
+        </p>
 
-    <a href="mailto:npiervs2302@gmail.com">Enviar email</a>
-  </div>
-</section>
+        <a href="mailto:npiervs2302@gmail.com">Enviar email</a>
+      </div>
+    </section>
 
   </main>
 
   <script src="script.js"></script>
 </body>
+
 </html>
