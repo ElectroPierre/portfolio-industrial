@@ -33,17 +33,17 @@
       <h1>Mini SCADA Industrial IoT</h1>
 
       <p class="hero-description">
-        Plataforma de supervisión industrial con simulación de datos, publicación MQTT,
-        almacenamiento histórico, alarmas y visualización en Grafana.
+        Sistema IIoT funcional con sensor físico DHT22, ESP8266, comunicación MQTT,
+        almacenamiento en InfluxDB y dashboard industrial en Grafana.
       </p>
 
       <div class="tech-list">
-        <span>Node-RED</span>
+        <span>ESP8266</span>
+        <span>DHT22</span>
         <span>MQTT</span>
+        <span>Node-RED</span>
         <span>InfluxDB</span>
         <span>Grafana</span>
-        <span>JavaScript</span>
-        <span>Series temporales</span>
       </div>
     </section>
 
@@ -82,12 +82,19 @@
 
       <div class="card architecture-card">
         <p class="architecture-flow">
-          Node-RED Simulator → MQTT → InfluxDB → Grafana
+          DHT22 → ESP8266 → WiFi → MQTT Mosquitto → Node-RED → InfluxDB → Grafana
         </p>
+      </div>
+    </section>
 
+    <section class="section section-compact">
+      <h2>Integración con sensor físico</h2>
+      <div class="about-card">
         <p>
-          La arquitectura está preparada para sustituir el simulador por un dispositivo real,
-          como un ESP32 con sensor DHT22, sin modificar el resto del sistema.
+          El sistema incorpora un sensor DHT22 conectado a un ESP8266 NodeMCU.
+          El dispositivo mide temperatura y humedad reales, publica los datos por MQTT
+          y los envía al flujo de Node-RED para almacenarlos en InfluxDB y visualizarlos
+          en Grafana.
         </p>
       </div>
     </section>
@@ -122,13 +129,13 @@
       <h2>Funciones implementadas</h2>
 
       <div class="card">
-        <ul class="check-list">
-          <li>Generación de datos industriales simulados en Node-RED.</li>
-          <li>Publicación de telemetría mediante MQTT.</li>
-          <li>Almacenamiento histórico en InfluxDB.</li>
-          <li>Dashboard industrial en Grafana con auto-refresh.</li>
-          <li>Alarmas visuales por sobretemperatura.</li>
-          <li>Preparación para integración futura con ESP32 y sensor real.</li>
+        <ul>
+          <li>Lectura real de temperatura y humedad con DHT22</li>
+          <li>Publicación MQTT desde ESP8266</li>
+          <li>Procesamiento de datos en Node-RED</li>
+          <li>Histórico en InfluxDB</li>
+          <li>Dashboard SCADA en Grafana</li>
+          <li>Alarmas visuales por sobretemperatura</li>
         </ul>
       </div>
     </section>
@@ -148,7 +155,7 @@
     </section>
 
     <section class="section section-compact">
-      <h2>Demo en vídeo</h2>
+      <h2>Galería del proyecto simulación</h2>
 
       <div class="card">
         <video controls width="100%">
@@ -156,13 +163,10 @@
           <Tu navegador no soporta vídeo HTML5.>
         </video>
         <p class="video-caption">
-          Dashboard en tiempo real con variables simuladas y arquitectura escalable preparada para integración con ESP32.
+          Dashboard en tiempo real con variables simuladas y arquitectura escalable preparada para integración con
+          ESP32.
         </p>
       </div>
-    </section>
-
-    <section class="section section-compact">
-      <h2>Galería del proyecto</h2>
 
       <div class="gallery">
         <figure class="image-card">
@@ -183,16 +187,43 @@
     </section>
 
     <section class="section section-compact">
-      <h2>Próximas mejoras</h2>
-
+      <h2>Galería del proyecto real</h2>
       <div class="card">
-        <ul class="check-list">
-          <li>Integrar ESP32 con sensor DHT22 para adquisición física real.</li>
-          <li>Añadir múltiples máquinas simuladas.</li>
-          <li>Crear indicadores OEE: disponibilidad, rendimiento y calidad.</li>
-          <li>Implementar registro histórico de eventos y alarmas.</li>
-        </ul>
+        <video controls width="100%">
+          <source src="../assets/videos/mini-scada-real.mp4" type="video/mp4">
+          <Tu navegador no soporta vídeo HTML5.>
+        </video>
+        <p class="video-caption">
+          Dashboard en tiempo real con sensor DHT22 para controlar variables de proceso como temperatura y humedad.
+        </p>
       </div>
+
+      <div class="gallery">
+        <figure class="image-card">
+          <img src="../assets/img/mini-scada/sistema-real.jpeg" alt="Dashboard Grafana del Mini SCADA Industrial">
+          <figcaption>Sistema ESP32 + DHT22 + DASHBOARD.</figcaption>
+        </figure>
+
+        <figure class="image-card">
+          <img src="../assets/img/mini-scada/node-red-real-data.png" alt="Flujo de Node-RED del Mini SCADA">
+          <figcaption>Flujo de Node-RED real, lógica de alarma, MQTT y almacenamiento histórico.</figcaption>
+        </figure>
+
+        <figure class="image-card">
+          <img src="../assets/img/mini-scada/monitor-serie.png" alt="Bucket de InfluxDB usado en el proyecto">
+          <figcaption>Monitor serie Arduino mostrando datos reales.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+
+
+    <section class="section section-compact">
+      <p>
+        El proyecto evolucionó desde una simulación virtual hasta una arquitectura IIoT real,
+        conectando un sensor físico con una plataforma SCADA local.
+      </p>
     </section>
 
     <section class="section section-compact">
