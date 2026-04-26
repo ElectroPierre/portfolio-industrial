@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto | Mini SCADA industrial</title>
+  <title>Proyecto | Mini SCADA Industrial IoT</title>
+  <meta name="description" content="Mini SCADA industrial con Node-RED, MQTT, InfluxDB y Grafana para supervisión, alarmas e históricos.">
   <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="brand" href="../index.html#inicio">Jeanpierre Vega</a>
 
-  <header>
-    <nav>
-      <h2>Jeanpierre Vega</h2>
-
-      <ul>
+      <ul class="nav-links">
         <li><a href="../index.html#inicio">Inicio</a></li>
         <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
         <li><a href="../index.html#experiencia">Experiencia</a></li>
@@ -26,65 +25,167 @@
   </header>
 
   <main>
-    <section>
-      <p class="hero-tag">Proyecto IIoT / Datos</p>
+    <section class="project-hero section">
+      <p class="eyebrow">Proyecto IIoT / SCADA / Datos industriales</p>
 
-      <h1>Mini SCADA industrial</h1>
+      <h1>Mini SCADA Industrial IoT</h1>
 
       <p class="hero-description">
-        Sistema básico de adquisición de datos, almacenamiento,
-        alarmas y visualización para procesos industriales.
+        Plataforma de supervisión industrial con simulación de datos, publicación MQTT,
+        almacenamiento histórico, alarmas y visualización en Grafana.
       </p>
 
       <div class="tech-list">
         <span>Node-RED</span>
         <span>MQTT</span>
-        <span>PostgreSQL</span>
+        <span>InfluxDB</span>
         <span>Grafana</span>
-        <span>SQL</span>
+        <span>JavaScript</span>
+        <span>Series temporales</span>
       </div>
     </section>
 
-    <section>
+    <section class="section section-compact">
+      <h2>Resumen del proyecto</h2>
+
+      <div class="card">
+        <p>
+          Este proyecto implementa un Mini SCADA industrial 100% virtual para supervisar
+          una máquina simulada en tiempo real. El sistema genera variables de proceso,
+          detecta alarmas, almacena históricos y muestra el estado de la instalación
+          mediante un dashboard industrial.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-compact">
       <h2>Problema industrial</h2>
-      <div class="about-card">
+
+      <div class="card">
         <p>
-          En una planta industrial es importante registrar variables del proceso,
-          visualizar tendencias y detectar alarmas antes de que afecten a la producción.
+          En una planta industrial es fundamental registrar variables del proceso,
+          visualizar tendencias y detectar condiciones anómalas antes de que afecten
+          a la producción, seguridad o mantenimiento.
         </p>
+
         <p>
-          Este proyecto simula una solución SCADA ligera usando herramientas abiertas
-          para supervisión y análisis de datos industriales.
+          Esta solución demuestra cómo implementar una arquitectura ligera y escalable
+          de supervisión usando herramientas abiertas.
         </p>
       </div>
     </section>
 
-    <section>
+    <section class="section section-compact">
       <h2>Arquitectura del sistema</h2>
-      <div class="about-card">
+
+      <div class="card architecture-card">
+        <p class="architecture-flow">
+          Node-RED Simulator → MQTT → InfluxDB → Grafana
+        </p>
+
         <p>
-          Dispositivo/sensor → MQTT → Node-RED → PostgreSQL → Grafana.
+          La arquitectura está preparada para sustituir el simulador por un dispositivo real,
+          como un ESP32 con sensor DHT22, sin modificar el resto del sistema.
         </p>
       </div>
     </section>
 
-    <section>
-      <h2>Estado del proyecto</h2>
-      <div class="about-card">
-        <p>
-          Proyecto orientado a demostrar conocimientos en adquisición de datos,
-          bases de datos, dashboards industriales y alarmas.
-        </p>
+    <section class="section section-compact">
+      <h2>Variables monitorizadas</h2>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Temperatura</h3>
+          <p>Variable principal para control ambiental y alarmas térmicas.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Humedad relativa</h3>
+          <p>Seguimiento ambiental para salas técnicas o zonas de producción.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Estado máquina</h3>
+          <p>Representación ON/OFF de la línea o activo supervisado.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Alarma técnica</h3>
+          <p>Activación automática por sobretemperatura.</p>
+        </article>
       </div>
     </section>
 
-    <section>
+    <section class="section section-compact">
+      <h2>Funciones implementadas</h2>
+
+      <div class="card">
+        <ul class="check-list">
+          <li>Generación de datos industriales simulados en Node-RED.</li>
+          <li>Publicación de telemetría mediante MQTT.</li>
+          <li>Almacenamiento histórico en InfluxDB.</li>
+          <li>Dashboard industrial en Grafana con auto-refresh.</li>
+          <li>Alarmas visuales por sobretemperatura.</li>
+          <li>Preparación para integración futura con ESP32 y sensor real.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-compact">
+      <h2>Resultados obtenidos</h2>
+
+      <div class="card">
+        <ul class="check-list">
+          <li>Monitorización en tiempo real de variables de proceso.</li>
+          <li>Histórico de temperatura y humedad.</li>
+          <li>Estado de máquina visible mediante panel tipo semáforo.</li>
+          <li>Alarma técnica con mapeo visual OK/ALARMA.</li>
+          <li>Arquitectura IIoT escalable para futuras máquinas o sensores reales.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-compact">
+      <h2>Galería del proyecto</h2>
+
+      <div class="gallery">
+        <figure class="image-card">
+          <img src="../assets/img/mini-scada/dashboard.png" alt="Dashboard Grafana del Mini SCADA Industrial">
+          <figcaption>Dashboard en Grafana con estado de máquina, alarma técnica, temperatura y humedad.</figcaption>
+        </figure>
+
+        <figure class="image-card">
+          <img src="../assets/img/mini-scada/node-red-flow.png" alt="Flujo de Node-RED del Mini SCADA">
+          <figcaption>Flujo de Node-RED para simulación, lógica de alarma, MQTT y almacenamiento histórico.</figcaption>
+        </figure>
+
+        <figure class="image-card">
+          <img src="../assets/img/mini-scada/influxdb-bucket.png" alt="Bucket de InfluxDB usado en el proyecto">
+          <figcaption>Bucket de InfluxDB utilizado para almacenar las series temporales del sistema.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-compact">
+      <h2>Próximas mejoras</h2>
+
+      <div class="card">
+        <ul class="check-list">
+          <li>Integrar ESP32 con sensor DHT22 para adquisición física real.</li>
+          <li>Añadir múltiples máquinas simuladas.</li>
+          <li>Crear indicadores OEE: disponibilidad, rendimiento y calidad.</li>
+          <li>Implementar registro histórico de eventos y alarmas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-compact">
       <a href="../index.html#proyectos" class="back-button">← Volver a proyectos</a>
     </section>
   </main>
-  <footer>
+
+  <footer class="site-footer">
     <p>© 2026 Jeanpierre Vega | Portfolio de Automatización Industrial</p>
   </footer>
 </body>
-
 </html>

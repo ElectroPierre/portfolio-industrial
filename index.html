@@ -1,104 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Industrial | Jeanpierre Vega Soria</title>
+  <meta name="description" content="Portfolio de automatización industrial, PLCs, IoT industrial, bases de datos y dashboards de Jeanpierre Vega Soria.">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">Jeanpierre Vega Soria</a>
 
-  <header>
-    <nav>
-      <h2>Jeanpierre Vega Soria</h2>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-
-    <section id="inicio">
+    <section id="inicio" class="hero section">
       <div class="hero-content">
-        <p class="hero-tag">Ingeniería Electrónica Industrial y Automática</p>
+        <p class="eyebrow">Ingeniería Electrónica Industrial y Automática</p>
 
-        <h1>Automatización Industrial, PLCs e IoT</h1>
+        <h1>Automatización Industrial, PLCs e IoT Industrial</h1>
 
         <p class="hero-description">
-          Desarrollo soluciones de automatización, adquisición de datos,
-          bases de datos y visualización de procesos industriales.
+          Desarrollo soluciones de automatización, adquisición de datos, bases de datos
+          y visualización de procesos industriales.
         </p>
 
-        <div class="hero-buttons">
-          <a href="#proyectos">Ver proyectos</a>
-          <a href="#contacto" class="secondary-button">Contactar</a>
+        <div class="hero-actions">
+          <a href="#proyectos" class="button">Ver proyectos</a>
+          <a href="#contacto" class="button button-secondary">Contactar</a>
         </div>
 
-        <div class="tech-list">
+        <div class="tech-list" aria-label="Tecnologías destacadas">
           <span>TIA Portal</span>
           <span>PLC Siemens</span>
           <span>Python</span>
-          <span>SQL</span>
+          <span>MQTT</span>
+          <span>Node-RED</span>
+          <span>InfluxDB</span>
           <span>Grafana</span>
         </div>
       </div>
     </section>
 
-    <section id="sobre-mi">
+    <section id="sobre-mi" class="section">
       <h2>Sobre mí</h2>
 
-      <div class="about-card">
+      <div class="card">
         <p>
-          Soy estudiante de Ingeniería Electrónica Industrial y Automática,
-          enfocado en automatización industrial, programación de PLCs,
-          adquisición de datos, bases de datos y visualización de procesos.
+          Soy estudiante de Ingeniería Electrónica Industrial y Automática, enfocado en
+          automatización industrial, programación de PLCs, adquisición de datos, bases de datos
+          y visualización de procesos.
         </p>
 
         <p>
           Mi objetivo es desarrollar soluciones prácticas para entornos industriales,
-          conectando sensores, controladores, software y dashboards para mejorar
-          la supervisión y la toma de decisiones.
+          conectando sensores, controladores, software y dashboards para mejorar la supervisión,
+          la trazabilidad y la toma de decisiones.
         </p>
       </div>
     </section>
-    <section id="experiencia">
+
+    <section id="experiencia" class="section">
       <h2>Experiencia y formación</h2>
+
       <div class="timeline">
-        <div class="timeline-item">
+        <article class="timeline-item">
           <h3>Ingeniería Electrónica Industrial y Automática</h3>
-          <p>Formación universitaria orientada a automatización, electrónica, control y programación industrial</p>
-        </div>
-        <div class="timeline-item">
+          <p>Formación universitaria orientada a automatización, electrónica, control y programación industrial.</p>
+        </article>
+
+        <article class="timeline-item">
           <h3>Prácticas en entorno industrial</h3>
-          <p>Experiencia en procesos industriales, automatización, calidad, documentación técnica y mejora de sistemas
-          </p>
-        </div>
-        <div class="timeline-item">
+          <p>Experiencia en procesos industriales, automatización, calidad, documentación técnica y mejora de sistemas.</p>
+        </article>
+
+        <article class="timeline-item">
           <h3>Proyectos técnicos personales</h3>
-          <p>Desarrollo de prototipos con PLCs, sensores, microcontroladores, bases de datos y dashboards</p>
-        </div>
+          <p>Desarrollo de prototipos con PLCs, sensores, microcontroladores, bases de datos y dashboards industriales.</p>
+        </article>
       </div>
     </section>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
+    <section id="proyectos" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio técnico</p>
+        <h2>Proyectos</h2>
+      </div>
 
       <div class="project-grid">
+        <article class="project-card featured">
+          <p class="project-status completed">Operativo</p>
+          <h3>Mini SCADA Industrial IoT</h3>
+          <p>
+            Sistema de supervisión industrial con simulación de datos, MQTT, almacenamiento
+            en InfluxDB, alarmas y dashboard en Grafana.
+          </p>
+          <span>Node-RED · MQTT · InfluxDB · Grafana</span>
+          <a href="proyectos/mini-scada.html" class="project-link">Ver proyecto</a>
+        </article>
 
         <article class="project-card">
           <p class="project-status">En desarrollo</p>
           <h3>Monitorización de motor industrial</h3>
           <p>
-            Sistema para medir vibraciones con sensores IMU, procesar datos
-            y visualizar el estado del motor en un dashboard.
+            Sistema para medir vibraciones con sensores IMU, procesar datos y visualizar
+            el estado del motor en un dashboard.
           </p>
           <span>ESP32 · IMU · MQTT · Grafana</span>
           <a href="proyectos/motor-vibraciones.html" class="project-link">Ver proyecto</a>
@@ -108,79 +125,64 @@
           <p class="project-status">En desarrollo</p>
           <h3>Microinvernadero automatizado</h3>
           <p>
-            Control de temperatura, humedad y ventilación mediante PLC,
-            sensores ambientales y visualización de datos.
+            Control de temperatura, humedad y ventilación mediante PLC, sensores ambientales
+            y visualización de datos.
           </p>
           <span>PLC Siemens · TIA Portal · HMI · Sensores</span>
-          <a href="proyectos/microinvernadero.html" class="project-link">Ver proyectos</a>
+          <a href="proyectos/microinvernadero.html" class="project-link">Ver proyecto</a>
         </article>
-
-        <article class="project-card">
-          <p class="project-status">En desarrollo</p>
-          <h3>Mini SCADA industrial</h3>
-          <p>
-            Sistema básico de adquisición de datos industriales con base de datos,
-            alarmas y paneles de supervisión.
-          </p>
-          <span>Node-RED · PostgreSQL · Grafana · SQL</span>
-          <a href="proyectos/mini-scada.html" class="project-link">Ver proyectos</a>
-        </article>
-
       </div>
     </section>
 
-    <section id="habilidades">
+    <section id="habilidades" class="section">
       <h2>Habilidades técnicas</h2>
 
       <div class="skills-grid">
-
-        <div class="skill-card">
+        <article class="skill-card">
           <h3>Automatización</h3>
-          <p>TIA Portal, PLC Siemens, GRAFCET, HMI, sensores industriales.</p>
-        </div>
+          <p>TIA Portal, PLC Siemens, GRAFCET, HMI y sensores industriales.</p>
+        </article>
 
-        <div class="skill-card">
+        <article class="skill-card">
           <h3>Programación</h3>
-          <p>Python, C/C++, Arduino, MATLAB, lógica de control.</p>
-        </div>
+          <p>Python, C/C++, Arduino, MATLAB y lógica de control.</p>
+        </article>
 
-        <div class="skill-card">
-          <h3>Datos e IoT</h3>
-          <p>SQL, PostgreSQL, MQTT, Node-RED, Grafana, dashboards.</p>
-        </div>
+        <article class="skill-card">
+          <h3>Datos e IoT industrial</h3>
+          <p>MQTT, Node-RED, InfluxDB, SQL, Grafana y dashboards industriales.</p>
+        </article>
 
-        <div class="skill-card">
+        <article class="skill-card">
           <h3>Simulación</h3>
-          <p>Factory I/O, Proteus, Arena, simulación de procesos industriales.</p>
-        </div>
-
+          <p>Factory I/O, Proteus, Arena y simulación de procesos industriales.</p>
+        </article>
       </div>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" class="section">
       <h2>Contacto</h2>
 
-      <div class="contact-card">
+      <div class="card contact-card">
         <p>
-          Estoy abierto a oportunidades relacionadas con automatización industrial,
-          PLCs, IoT industrial, bases de datos y visualización de procesos.
+          Estoy abierto a oportunidades relacionadas con automatización industrial, PLCs,
+          IoT industrial, bases de datos y visualización de procesos.
         </p>
 
         <div class="contact-links">
           <a href="mailto:npiervs2302@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/jeanpierre-vega-soria/?skipRedirect=true" target="_blank">LinkedIn</a>
-          <a href="https://github.com/ElectroPierre/portfolio-industrial" target="_blank">GitHub</a>
-          <a href="assets/cv-jeanpierre-vega.pdf" target="_blank">Descargar CV</a>
+          <a href="https://www.linkedin.com/in/jeanpierre-vega-soria/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/ElectroPierre/portfolio-industrial" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="assets/cv-jeanpierre-vega.pdf" target="_blank" rel="noopener noreferrer">Descargar CV</a>
         </div>
       </div>
     </section>
-
   </main>
 
-  <script src="script.js"></script>
-  <footer>
+  <footer class="site-footer">
     <p>© 2026 Jeanpierre Vega | Portfolio de Automatización Industrial</p>
   </footer>
-</body>
 
+  <script src="script.js"></script>
+</body>
 </html>
