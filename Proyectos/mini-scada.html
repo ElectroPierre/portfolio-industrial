@@ -1,224 +1,295 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto | Mini SCADA Industrial IoT</title>
+    <meta
+      name="description"
+      content="Mini SCADA Industrial IoT con ESP8266, DHT22, MQTT, Node-RED, InfluxDB y Grafana."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto | Mini SCADA Industrial IoT</title>
-  <meta name="description" content="Mini SCADA Industrial IoT con ESP8266, DHT22, MQTT, Node-RED, InfluxDB y Grafana.">
-  <link rel="stylesheet" href="../style.css">
-</head>
-
-<body>
-  <header class="site-header">
-    <nav class="navbar" aria-label="Navegación principal">
-      <a class="brand" href="../index.html#inicio">Jeanpierre Vega</a>
-      <ul class="nav-links">
-        <li><a href="../index.html#inicio">Inicio</a></li>
-        <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
-        <li><a href="../index.html#experiencia">Experiencia</a></li>
-        <li><a href="../index.html#proyectos">Proyectos</a></li>
-        <li><a href="../index.html#habilidades">Habilidades</a></li>
-        <li><a href="../index.html#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="project-hero section">
-      <p class="eyebrow">Proyecto IIoT / SCADA / Datos industriales</p>
-      <h1>Mini SCADA Industrial IoT</h1>
-      <p class="hero-description">
-        Sistema funcional de monitorización industrial con sensor físico DHT22, ESP8266,
-        comunicación MQTT, procesamiento en Node-RED, histórico en InfluxDB y dashboard en Grafana.
-      </p>
-      <div class="tech-list">
-        <span>ESP8266</span><span>DHT22</span><span>WiFi</span><span>MQTT</span>
-        <span>Node-RED</span><span>InfluxDB</span><span>Grafana</span>
-      </div>
-    </section>
-
-    <section class="section section-compact">
-      <div class="project-summary-grid">
-        <article class="metric-card"><span>Estado</span><strong>Operativo</strong></article>
-        <article class="metric-card"><span>Tipo</span><strong>IIoT + SCADA</strong></article>
-        <article class="metric-card"><span>Datos</span><strong>Tiempo real</strong></article>
-        <article class="metric-card"><span>Hardware</span><strong>ESP8266 + DHT22</strong></article>
-      </div>
-    </section>
-
-    <section class="section section-compact">
-      <h2>Resumen del proyecto</h2>
-      <div class="card">
-        <p>
-          Este proyecto empezó como una simulación virtual y evolucionó hasta convertirse en una arquitectura IIoT real.
-          El sistema mide temperatura y humedad con un sensor físico, envía los datos por MQTT, los procesa con
-          Node-RED,
-          los almacena como series temporales y los muestra en un dashboard industrial.
-        </p>
-      </div>
-    </section>
-
-    <section class="section section-compact">
-      <h2>Problema industrial</h2>
-      <div class="card">
-        <p>
-          En una planta industrial es importante monitorizar variables ambientales o de proceso, detectar condiciones
-          anómalas y disponer de históricos para mantenimiento, trazabilidad y toma de decisiones.
-        </p>
-        <p>
-          Esta solución replica a pequeña escala una plataforma de supervisión para salas técnicas, cuadros eléctricos,
-          almacenes, laboratorios o pequeñas líneas de producción.
-        </p>
-      </div>
-    </section>
-
-    <section class="section section-compact">
-      <h2>Arquitectura del sistema</h2>
-      <div class="card architecture-card">
-        <p class="architecture-flow">DHT22 → ESP8266 → WiFi → Mosquitto MQTT → Node-RED → InfluxDB → Grafana</p>
-        <p>
-          La arquitectura es modular: el sensor físico puede sustituirse o ampliarse con nuevos dispositivos sin cambiar
-          la capa de visualización ni la base de datos.
-        </p>
-      </div>
-    </section>
-
-    <section class="section section-compact">
-      <h2>Variables monitorizadas</h2>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h3>Temperatura</h3>
-          <p>Lectura real del DHT22 y alarma visual por sobretemperatura.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Humedad relativa</h3>
-          <p>Seguimiento ambiental en tiempo real e histórico.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Estado de máquina</h3>
-          <p>Indicador ON/OFF para representar disponibilidad del activo.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Alarma técnica</h3>
-          <p>Mapeo visual OK/ALARMA en Grafana según umbral configurado.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-compact">
-      <h2>Funciones implementadas</h2>
-      <div class="card">
-        <ul class="check-list">
-          <li>Lectura física de temperatura y humedad con DHT22.</li>
-          <li>Publicación de telemetría desde ESP8266 mediante MQTT.</li>
-          <li>Recepción, depuración y encaminamiento de datos en Node-RED.</li>
-          <li>Almacenamiento histórico en InfluxDB.</li>
-          <li>Dashboard SCADA en Grafana con actualización automática.</li>
-          <li>Alarma visual por sobretemperatura.</li>
-          <li>Arranque automático local de servicios para trabajar como mini servidor SCADA.</li>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a class="brand" href="../index.html#inicio">Jeanpierre Vega</a>
+        <ul class="nav-links">
+          <li><a href="../index.html#inicio">Inicio</a></li>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#experiencia">Experiencia</a></li>
+          <li><a href="../index.html#proyectos">Proyectos</a></li>
+          <li><a href="../index.html#habilidades">Habilidades</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
         </ul>
-      </div>
-    </section>
+      </nav>
+    </header>
 
-    <section class="section section-compact">
-      <h2>Demo del sistema real</h2>
-      <div class="card media-card">
-        <video controls preload="metadata" width="100%">
-          <source src="../assets/videos/mini-scada-real.mp4" type="video/mp4">
-          Tu navegador no soporta vídeo HTML5.
-        </video>
-        <p class="video-caption">
-          Dashboard en tiempo real alimentado por un sensor físico DHT22 conectado a un ESP8266 mediante MQTT.
+    <main>
+      <section class="project-hero section">
+        <p class="eyebrow">Proyecto IIoT / SCADA / Datos industriales</p>
+        <h1>Mini SCADA Industrial IoT</h1>
+        <p class="hero-description">
+          Sistema funcional de monitorización industrial con sensor físico
+          DHT22, ESP8266, comunicación MQTT, procesamiento en Node-RED,
+          histórico en InfluxDB y dashboard en Grafana.
         </p>
-      </div>
-    </section>
+        <div class="tech-list">
+          <span>ESP8266</span><span>DHT22</span><span>WiFi</span
+          ><span>MQTT</span> <span>Node-RED</span><span>InfluxDB</span
+          ><span>Grafana</span>
+        </div>
+      </section>
 
-    <section class="section section-compact">
-      <h2>Galería del proyecto real</h2>
-      <div class="gallery">
-        <figure class="image-card featured-image">
-          <img src="../assets/img/mini-scada/sistema-real.jpeg"
-            alt="Sistema real Mini SCADA con ESP8266, DHT22 y dashboard Grafana">
-          <figcaption>
-            Sistema IIoT real: ESP8266 con sensor DHT22 enviando datos por MQTT al dashboard SCADA en Grafana.
-          </figcaption>
-        </figure>
-        <figure class="image-card">
-          <img src="../assets/img/mini-scada/dashboard-real.png" alt="Dashboard real del Mini SCADA Industrial IoT">
-          <figcaption>Dashboard real en Grafana con temperatura, humedad, estado y alarma técnica.</figcaption>
-        </figure>
-        <figure class="image-card">
-          <img src="../assets/img/mini-scada/node-red-real-data.png" alt="Flujo real de Node-RED recibiendo datos MQTT">
-          <figcaption>Flujo de Node-RED recibiendo datos MQTT del ESP8266 y enviándolos a InfluxDB.</figcaption>
-        </figure>
-        <figure class="image-card">
-          <img src="../assets/img/mini-scada/monitor-serie.png" alt="Monitor serie de Arduino con datos del DHT22">
-          <figcaption>Monitor serie de Arduino mostrando lecturas reales del DHT22 y conexión MQTT.</figcaption>
-        </figure>
-      </div>
-    </section>
+      <section class="section section-compact">
+        <div class="project-summary-grid">
+          <article class="metric-card">
+            <span>Estado</span><strong>Operativo</strong>
+          </article>
+          <article class="metric-card">
+            <span>Tipo</span><strong>IIoT + SCADA</strong>
+          </article>
+          <article class="metric-card">
+            <span>Datos</span><strong>Tiempo real</strong>
+          </article>
+          <article class="metric-card">
+            <span>Hardware</span><strong>ESP8266 + DHT22</strong>
+          </article>
+        </div>
+      </section>
 
-    <section class="section section-compact">
-      <h2>Fase previa: simulación virtual</h2>
-      <div class="card media-card">
-        <video controls preload="metadata" width="100%">
-          <source src="../assets/videos/mini-scada-demo.mp4" type="video/mp4">
-          Tu navegador no soporta vídeo HTML5.
-        </video>
-        <p class="video-caption">
-          Antes de integrar el sensor físico, se validó la arquitectura completa con datos simulados en Node-RED.
-        </p>
-      </div>
-      <div class="gallery gallery-small">
-        <figure class="image-card">
-          <img src="../assets/img/mini-scada/dashboard.png" alt="Dashboard de simulación en Grafana">
-          <figcaption>Dashboard inicial con variables simuladas.</figcaption>
-        </figure>
-        <figure class="image-card">
-          <img src="../assets/img/mini-scada/node-red-flow.png" alt="Flujo Node-RED de simulación">
-          <figcaption>Flujo de simulación, alarma y almacenamiento histórico.</figcaption>
-        </figure>
-        <figure class="image-card">
-          <img src="../assets/img/mini-scada/influxdb-bucket.png" alt="Bucket de InfluxDB para series temporales">
-          <figcaption>Bucket de InfluxDB usado para históricos.</figcaption>
-        </figure>
-      </div>
-    </section>
+      <section class="section section-compact">
+        <h2>Resumen del proyecto</h2>
+        <div class="card">
+          <p>
+            Este proyecto empezó como una simulación virtual y evolucionó hasta
+            convertirse en una arquitectura IIoT real. El sistema mide
+            temperatura y humedad con un sensor físico, envía los datos por
+            MQTT, los procesa con Node-RED, los almacena como series temporales
+            y los muestra en un dashboard industrial.
+          </p>
+        </div>
+      </section>
 
-    <section class="section section-compact">
-      <h2>Resultados obtenidos</h2>
-      <div class="card">
-        <ul class="check-list">
-          <li>Proyecto IIoT real conectado de extremo a extremo.</li>
-          <li>Datos físicos visualizados en tiempo real.</li>
-          <li>Histórico de variables para análisis posterior.</li>
-          <li>Dashboard industrial presentable para portfolio técnico.</li>
-          <li>Base preparada para añadir más sensores, máquinas, KPIs OEE o alertas externas.</li>
-        </ul>
-      </div>
-    </section>
+      <section class="section section-compact">
+        <h2>Problema industrial</h2>
+        <div class="card">
+          <p>
+            En una planta industrial es importante monitorizar variables
+            ambientales o de proceso, detectar condiciones anómalas y disponer
+            de históricos para mantenimiento, trazabilidad y toma de decisiones.
+          </p>
+          <p>
+            Esta solución replica a pequeña escala una plataforma de supervisión
+            para salas técnicas, cuadros eléctricos, almacenes, laboratorios o
+            pequeñas líneas de producción.
+          </p>
+        </div>
+      </section>
 
-    <section class="section section-compact">
-      <h2>Próximas mejoras</h2>
-      <div class="card">
-        <ul class="check-list">
-          <li>Añadir control de actuador con relé o ventilador.</li>
-          <li>Crear alarma por pérdida de comunicación del ESP8266.</li>
-          <li>Incorporar notificaciones por Telegram o email.</li>
-          <li>Añadir múltiples nodos sensores para simular una planta con varias zonas.</li>
-        </ul>
-      </div>
-    </section>
+      <section class="section section-compact">
+        <h2>Arquitectura del sistema</h2>
+        <div class="card architecture-card">
+          <p class="architecture-flow">
+            DHT22 → ESP8266 → WiFi → Mosquitto MQTT → Node-RED → InfluxDB →
+            Grafana
+          </p>
+          <p>
+            La arquitectura es modular: el sensor físico puede sustituirse o
+            ampliarse con nuevos dispositivos sin cambiar la capa de
+            visualización ni la base de datos.
+          </p>
+        </div>
+      </section>
 
-    <section class="section section-compact">
-      <a href="../index.html#proyectos" class="back-button">← Volver a proyectos</a>
-    </section>
-  </main>
+      <section class="section section-compact">
+        <h2>Variables monitorizadas</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Temperatura</h3>
+            <p>Lectura real del DHT22 y alarma visual por sobretemperatura.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Humedad relativa</h3>
+            <p>Seguimiento ambiental en tiempo real e histórico.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Estado de máquina</h3>
+            <p>Indicador ON/OFF para representar disponibilidad del activo.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Alarma técnica</h3>
+            <p>Mapeo visual OK/ALARMA en Grafana según umbral configurado.</p>
+          </article>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <p>© 2026 Jeanpierre Vega | Portfolio de Automatización Industrial</p>
-  </footer>
-</body>
+      <section class="section section-compact">
+        <h2>Funciones implementadas</h2>
+        <div class="card">
+          <ul class="check-list">
+            <li>Lectura física de temperatura y humedad con DHT22.</li>
+            <li>Publicación de telemetría desde ESP8266 mediante MQTT.</li>
+            <li>
+              Recepción, depuración y encaminamiento de datos en Node-RED.
+            </li>
+            <li>Almacenamiento histórico en InfluxDB.</li>
+            <li>Dashboard SCADA en Grafana con actualización automática.</li>
+            <li>Alarma visual por sobretemperatura.</li>
+            <li>
+              Arranque automático local de servicios para trabajar como mini
+              servidor SCADA.
+            </li>
+          </ul>
+        </div>
+      </section>
 
+      <section class="section section-compact">
+        <h2>Demo del sistema real</h2>
+        <div class="card media-card">
+          <video controls preload="metadata" width="100%">
+            <source
+              src="../assets/videos/mini-scada-real.mp4"
+              type="video/mp4"
+            />
+            Tu navegador no soporta vídeo HTML5.
+          </video>
+          <p class="video-caption">
+            Dashboard en tiempo real alimentado por un sensor físico DHT22
+            conectado a un ESP8266 mediante MQTT.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Galería del proyecto real</h2>
+        <div class="gallery">
+          <figure class="image-card featured-image">
+            <img
+              src="../assets/img/mini-scada/sistema-real.jpeg"
+              alt="Sistema real Mini SCADA con ESP8266, DHT22 y dashboard Grafana"
+            />
+            <figcaption>
+              Sistema IIoT real: ESP8266 con sensor DHT22 enviando datos por
+              MQTT al dashboard SCADA en Grafana.
+            </figcaption>
+          </figure>
+          <figure class="image-card">
+            <img
+              src="../assets/img/mini-scada/dashboard-real.png"
+              alt="Dashboard real del Mini SCADA Industrial IoT"
+            />
+            <figcaption>
+              Dashboard real en Grafana con temperatura, humedad, estado y
+              alarma técnica.
+            </figcaption>
+          </figure>
+          <figure class="image-card">
+            <img
+              src="../assets/img/mini-scada/node-red-real-data.png"
+              alt="Flujo real de Node-RED recibiendo datos MQTT"
+            />
+            <figcaption>
+              Flujo de Node-RED recibiendo datos MQTT del ESP8266 y enviándolos
+              a InfluxDB.
+            </figcaption>
+          </figure>
+          <figure class="image-card">
+            <img
+              src="../assets/img/mini-scada/monitor-serie.png"
+              alt="Monitor serie de Arduino con datos del DHT22"
+            />
+            <figcaption>
+              Monitor serie de Arduino mostrando lecturas reales del DHT22 y
+              conexión MQTT.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Fase previa: simulación virtual</h2>
+        <div class="card media-card">
+          <video controls preload="metadata" width="100%">
+            <source
+              src="../assets/videos/mini-scada-demo.mp4"
+              type="video/mp4"
+            />
+            Tu navegador no soporta vídeo HTML5.
+          </video>
+          <p class="video-caption">
+            Antes de integrar el sensor físico, se validó la arquitectura
+            completa con datos simulados en Node-RED.
+          </p>
+        </div>
+        <div class="gallery gallery-small">
+          <figure class="image-card">
+            <img
+              src="../assets/img/mini-scada/dashboard.png"
+              alt="Dashboard de simulación en Grafana"
+            />
+            <figcaption>Dashboard inicial con variables simuladas.</figcaption>
+          </figure>
+          <figure class="image-card">
+            <img
+              src="../assets/img/mini-scada/node-red-flow.png"
+              alt="Flujo Node-RED de simulación"
+            />
+            <figcaption>
+              Flujo de simulación, alarma y almacenamiento histórico.
+            </figcaption>
+          </figure>
+          <figure class="image-card">
+            <img
+              src="../assets/img/mini-scada/influxdb-bucket.png"
+              alt="Bucket de InfluxDB para series temporales"
+            />
+            <figcaption>Bucket de InfluxDB usado para históricos.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Resultados obtenidos</h2>
+        <div class="card">
+          <ul class="check-list">
+            <li>Proyecto IIoT real conectado de extremo a extremo.</li>
+            <li>Datos físicos visualizados en tiempo real.</li>
+            <li>Histórico de variables para análisis posterior.</li>
+            <li>Dashboard industrial presentable para portfolio técnico.</li>
+            <li>
+              Base preparada para añadir más sensores, máquinas, KPIs OEE o
+              alertas externas.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Próximas mejoras</h2>
+        <div class="card">
+          <ul class="check-list">
+            <li>Añadir control de actuador con relé o ventilador.</li>
+            <li>Crear alarma por pérdida de comunicación del ESP8266.</li>
+            <li>Incorporar notificaciones por Telegram o email.</li>
+            <li>
+              Añadir múltiples nodos sensores para simular una planta con varias
+              zonas.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <a href="../index.html#proyectos" class="back-button"
+          >← Volver a proyectos</a
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Jeanpierre Vega | Portfolio de Automatización Industrial</p>
+    </footer>
+  </body>
 </html>
