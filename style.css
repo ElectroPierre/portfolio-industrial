@@ -435,3 +435,53 @@ footer p {
     flex-direction: column;
   }
 }
+
+.project-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 60px;
+}
+
+.project-page video {
+  margin: 30px 0 50px;
+  border-radius: 16px;
+  border: 1px solid #334155;
+}
+
+.project-page h2 {
+  margin-top: 45px;
+}
+
+.project-page ul {
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+.project-page li {
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.project-page .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.project-page .gallery img {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  background: #1e293b;
+}
+
+@media (max-width: 800px) {
+  .project-page {
+    padding: 60px 25px;
+  }
+
+  .project-page .gallery {
+    grid-template-columns: 1fr;
+  }
+}

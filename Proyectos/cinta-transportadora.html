@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto | Cinta Transportadora Industrial</title>
+    <meta
+      name="description"
+      content="Sistema de cinta transportadora industrial con PLC Siemens S7-1200, HMI, Factory I/O, alarmas y contador de piezas."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a class="brand" href="../index.html#inicio">Jeanpierre Vega</a>
+        <ul class="nav-links">
+          <li><a href="../index.html#inicio">Inicio</a></li>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#experiencia">Experiencia</a></li>
+          <li><a href="../index.html#proyectos">Proyectos</a></li>
+          <li><a href="../index.html#habilidades">Habilidades</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero section">
+        <p class="eyebrow">PLC / HMI / Simulación industrial</p>
+        <h1>Cinta Transportadora Industrial</h1>
+        <p class="hero-description">
+          Sistema automatizado de transporte de piezas desarrollado con TIA Portal,
+          PLC Siemens S7-1200, HMI KTP700 Basic y simulación 3D en Factory I/O.
+        </p>
+
+        <div class="tech-list">
+          <span>TIA Portal</span>
+          <span>PLC Siemens S7-1200</span>
+          <span>Ladder</span>
+          <span>HMI Siemens</span>
+          <span>PLCSIM</span>
+          <span>Factory I/O</span>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <div class="project-summary-grid">
+          <article class="metric-card">
+            <span>Estado</span><strong>Operativo</strong>
+          </article>
+          <article class="metric-card">
+            <span>Tipo</span><strong>PLC + HMI</strong>
+          </article>
+          <article class="metric-card">
+            <span>Simulación</span><strong>Factory I/O</strong>
+          </article>
+          <article class="metric-card">
+            <span>Control</span><strong>S7-1200</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Resumen del proyecto</h2>
+        <div class="card">
+          <p>
+            Este proyecto reproduce una aplicación típica de automatización
+            industrial: el control de una cinta transportadora con detección de
+            piezas, contador de producción, estados de máquina, alarmas por atasco
+            y supervisión desde una pantalla HMI.
+          </p>
+          <p>
+            La lógica fue programada en Ladder dentro de TIA Portal y validada con
+            PLCSIM, HMI Runtime y Factory I/O para simular el comportamiento de una
+            instalación real.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Problema industrial</h2>
+        <div class="card">
+          <p>
+            En una línea de producción es necesario transportar piezas de forma
+            segura, detectar si una pieza queda bloqueada y ofrecer al operador
+            información clara sobre el estado de la máquina.
+          </p>
+          <p>
+            Este proyecto resuelve ese problema mediante una lógica de control
+            robusta, señalización visual, contador de piezas y alarma automática
+            si una pieza no llega al sensor de salida dentro del tiempo esperado.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Arquitectura del sistema</h2>
+        <div class="card architecture-card">
+          <p class="architecture-flow">
+            Factory I/O → PLCSIM → PLC S7-1200 → HMI Runtime → Alarmas y contadores
+          </p>
+          <p>
+            Factory I/O genera las señales de sensores y actuadores. El PLC procesa
+            la lógica de control, activa el motor de la cinta y comunica el estado
+            del sistema al HMI.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Funciones implementadas</h2>
+        <div class="card">
+          <ul class="check-list">
+            <li>Marcha y paro de cinta mediante pulsadores.</li>
+            <li>Selector de modo manual y automático.</li>
+            <li>Memoria de marcha con enclavamiento lógico.</li>
+            <li>Detección de pieza en entrada y salida.</li>
+            <li>Alarma por atasco si la pieza no llega al sensor de salida.</li>
+            <li>Contador de piezas producidas.</li>
+            <li>Reset independiente de alarma y contador.</li>
+            <li>Estados de máquina: parada, en marcha y alarma.</li>
+            <li>Tiempo total de marcha usando Clock Memory del PLC.</li>
+            <li>Visualización completa desde HMI Siemens.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Demo del sistema</h2>
+        <div class="card media-card">
+          <video controls preload="metadata" width="100%">
+            <source
+              src="../assets/videos/cinta/demo-cinta-transportadora.mp4"
+              type="video/mp4"
+            />
+            Tu navegador no soporta vídeo HTML5.
+          </video>
+          <p class="video-caption">
+            Simulación de la cinta transportadora con Factory I/O, HMI Runtime y
+            lógica PLC ejecutándose en PLCSIM.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Interfaz HMI y simulación 3D</h2>
+        <div class="gallery gallery-small">
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/hmi-cinta.png"
+              alt="Pantalla HMI del proyecto"
+            />
+            <figcaption>
+              Pantalla HMI con botones de marcha, paro, reset, contador de piezas,
+              tiempo de marcha y estados de máquina.
+            </figcaption>
+          </figure>
+
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/factoryio-cinta.png"
+              alt="Simulación de cinta transportadora en Factory I/O"
+            />
+            <figcaption>
+              Escena 3D en Factory I/O con cinta transportadora, sensores, cajas y
+              baliza de estado.
+            </figcaption>
+          </figure>
+
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/mapeo-factoryio.png"
+              alt="Mapeo de señales en Factory I/O"
+            />
+            <figcaption>
+              Mapeo de entradas y salidas entre Factory I/O y el PLC Siemens
+              simulado.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Lógica de control en TIA Portal</h2>
+        <div class="gallery gallery-small">
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/marchamemorizada-cinta.png"
+              alt="Network de marcha memorizada"
+            />
+            <figcaption>
+              Network de marcha memorizada con pulsador de marcha, paro,
+              emergencia y alarma.
+            </figcaption>
+          </figure>
+
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/piezaalarma-cinta.png"
+              alt="Network de pieza y alarma por atasco"
+            />
+            <figcaption>
+              Detección de pieza dentro de la cinta y generación de alarma por
+              atasco mediante temporizador.
+            </figcaption>
+          </figure>
+
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/contadorpiezas-cinta.png"
+              alt="Network contador de piezas"
+            />
+            <figcaption>
+              Contador de piezas a partir del sensor de salida de la cinta
+              transportadora.
+            </figcaption>
+          </figure>
+
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/estadomaquina-cinta.png"
+              alt="Network estado de máquina"
+            />
+            <figcaption>
+              Estados lógicos de máquina utilizados para mostrar parada, marcha y
+              alarma en el HMI.
+            </figcaption>
+          </figure>
+
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/tiempomarchaclock_1hz-cinta.png"
+              alt="Network tiempo de marcha con Clock Memory"
+            />
+            <figcaption>
+              Cálculo del tiempo de marcha mediante la marca de reloj Clock_1Hz
+              del PLC.
+            </figcaption>
+          </figure>
+
+          <figure class="image-card">
+            <img
+              src="../assets/img/cinta/listanetwork-cinta.png"
+              alt="Lista de networks del proyecto"
+            />
+            <figcaption>
+              Organización general del programa en networks para facilitar el
+              mantenimiento y la lectura del código.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Variables y señales utilizadas</h2>
+        <div class="gallery gallery-small">
+          <figure class="image-card featured-image">
+            <img
+              src="../assets/img/cinta/variables-plc.png"
+              alt="Tabla de variables PLC"
+            />
+            <figcaption>
+              Tabla de variables del PLC: entradas, salidas, marcas internas y
+              señales auxiliares del proyecto.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Resultados obtenidos</h2>
+        <div class="card">
+          <ul class="check-list">
+            <li>Sistema completo PLC + HMI + simulación 3D funcionando.</li>
+            <li>Control de cinta transportadora desde pulsadores físicos y HMI.</li>
+            <li>Visualización en tiempo real de producción y estado de máquina.</li>
+            <li>Detección automática de atasco con parada de seguridad.</li>
+            <li>Proyecto documentado y preparado para portfolio industrial.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <h2>Próximas mejoras</h2>
+        <div class="card">
+          <ul class="check-list">
+            <li>Registrar producción y alarmas en una base de datos SQL.</li>
+            <li>Conectar el PLC con Node-RED mediante OPC UA o S7.</li>
+            <li>Crear un dashboard en Grafana con KPIs de producción.</li>
+            <li>Añadir histórico de alarmas y tiempos de parada.</li>
+            <li>Calcular disponibilidad, rendimiento y OEE básico.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-compact">
+        <a href="../index.html#proyectos" class="back-button">
+          ← Volver a proyectos
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Jeanpierre Vega | Portfolio de Automatización Industrial</p>
+    </footer>
+  </body>
+</html>
